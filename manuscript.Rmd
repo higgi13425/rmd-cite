@@ -1,0 +1,69 @@
+---
+title: "manuscript"
+author: "Peter Higgins"
+date: "11/11/2021"
+output: html_document
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(rmarkdown)
+library(medicaldata)
+library(gtsummary)
+```
+
+## Manuscript
+
+This is an example manuscript. This is a background section. Insert the first citation here [@berinstein2021].
+
+More background here. Insert the second citation here.
+
+------
+
+## Methods
+
+This is the methods section. Insert an obscure methodological reference here.
+
+------
+
+## Results
+
+This is the results section.
+
+Here is Table 1.
+
+```{r table, echo=FALSE}
+trial %>% tbl_summary(by = trt) %>% add_p()
+```
+
+<br>
+
+<br>
+
+Here is a Plot.
+
+```{r covid, echo=FALSE}
+medicaldata::covid_testing %>% 
+  ggplot(aes(x = pan_day, y = ct_result)) +
+  geom_point() +
+  labs(x = "Pandemic Day",
+       y = "PCR Cycles Needed to Detect SARS-CoV2\n45 cycles = Negative Test")
+```
+
+------
+
+## Discussion
+
+Discussion of these results.
+
+Insert obscure reference 4 here.
+
+Add a reference to your previous work here.
+
+THE END.
+
+-------
+
+### References
