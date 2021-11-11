@@ -20,13 +20,13 @@ This is an example manuscript. This is a background section. Insert the first ci
 
 More background here. Insert the second citation here.
 
-------
+------------------------------------------------------------------------
 
 ## Methods
 
 This is the methods section. Insert an obscure methodological reference here.
 
-------
+------------------------------------------------------------------------
 
 ## Results
 
@@ -52,7 +52,7 @@ medicaldata::covid_testing %>%
        y = "PCR Cycles Needed to Detect SARS-CoV2\n45 cycles = Negative Test")
 ```
 
-------
+------------------------------------------------------------------------
 
 ## Discussion
 
@@ -64,6 +64,6 @@ Add a reference to your previous work here.
 
 THE END.
 
--------
+------------------------------------------------------------------------
 
 ### References
