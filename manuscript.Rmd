@@ -4,6 +4,7 @@ author: "Peter Higgins"
 date: "11/11/2021"
 output: html_document
 bibliography: references.bib
+csl: the-american-journal-of-gastroenterology.csl
 ---
 
 ```{r setup, include=FALSE}
@@ -32,9 +33,10 @@ This is the methods section. Insert an obscure methodological reference here.
 
 This is the results section.
 
-Here is Table 1.
+#### Here is Table 1.
 
-```{r table, echo=FALSE}
+```{r table}
+#| echo = FALSE
 trial %>% tbl_summary(by = trt) %>% add_p()
 ```
 
@@ -42,9 +44,11 @@ trial %>% tbl_summary(by = trt) %>% add_p()
 
 <br>
 
-Here is a Plot.
+#### Here is a Plot.
 
-```{r covid, echo=FALSE}
+```{r covid}
+#| echo = FALSE
+#| warning = FALSE
 medicaldata::covid_testing %>% 
   ggplot(aes(x = pan_day, y = ct_result)) +
   geom_point() +
